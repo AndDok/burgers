@@ -1390,6 +1390,13 @@ footer {
 
 .slider__list {
   height: 29.375rem; }
+  @media screen and (max-width: 768px) {
+    .slider__list {
+      height: 100%;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-align: center; } }
 
 .slider__elem {
   display: -webkit-box;
@@ -1397,6 +1404,17 @@ footer {
   display: flex;
   height: 100%;
   position: relative; }
+  @media screen and (max-width: 768px) {
+    .slider__elem {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20%; } }
 
 .slider__col {
   -webkit-box-flex: 1;
@@ -1412,12 +1430,34 @@ footer {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; }
+  @media screen and (max-width: 768px) {
+    .slider__col {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-align: center; } }
+
+@media screen and (max-width: 768px) {
+  .slider__img {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 75%;
+    height: 75%; } }
 
 .slider__text {
   font-size: 0.875rem;
   color: #fff;
   height: 6.25rem;
   line-height: 1.8; }
+  @media screen and (max-width: 768px) {
+    .slider__text {
+      margin-bottom: 3.125rem; } }
 
 .slider__order {
   display: -webkit-box;
@@ -1426,6 +1466,16 @@ footer {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end; }
+  @media screen and (max-width: 768px) {
+    .slider__order {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-align: center; } }
 
 .slider__price {
   font-size: 1.875rem;
@@ -1436,6 +1486,9 @@ footer {
   .slider__price span {
     font-family: 'Gagalin-Regular', Helvetica, sans-serif;
     font-size: 2em; }
+  @media screen and (max-width: 768px) {
+    .slider__price {
+      margin-bottom: 1.875rem; } }
 
 .slider__arrow {
   position: absolute;
@@ -1448,11 +1501,17 @@ footer {
     -ms-transform: translate(0, -50%) rotate(90deg);
     transform: translate(0, -50%) rotate(90deg);
     left: -1.25rem; }
+    @media screen and (max-width: 768px) {
+      .slider__arrow_left {
+        left: -0.625rem; } }
   .slider__arrow_right {
     -webkit-transform: translate(0, -50%) rotate(-90deg);
     -ms-transform: translate(0, -50%) rotate(-90deg);
     transform: translate(0, -50%) rotate(-90deg);
     right: -1.25rem; }
+    @media screen and (max-width: 768px) {
+      .slider__arrow_right {
+        right: -0.625rem; } }
 
 .slider__composititon {
   position: absolute;
