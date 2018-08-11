@@ -1,0 +1,143 @@
+.slider {
+  position: relative;
+}
+
+.slider__list {
+  height: rem(470px);
+}
+
+.slider__elem {
+  display: flex;
+  height: 100%;
+  position: relative;
+}
+
+.slider__col {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.slider__text {
+  font-size: rem(14px);
+  color: #fff;
+  height: rem(100px);
+  line-height: 1.8;
+}
+
+.slider__order {
+  display: flex;
+  align-items: flex-end;
+}
+
+.slider__price {
+  font-size: rem(30px);
+  color: $orange;
+  @include gagalin;
+  line-height: 1;
+  margin-right: rem(30px);
+  span {
+    @include gagalin;
+    font-size: 2em;
+  }
+}
+
+.slider__arrow {
+  position: absolute;
+  top: 50%;
+  height: rem(15px);
+  width: rem(27px);
+  fill: #fff;
+  &_left {
+    transform: translate(0, -50%) rotate(90deg);
+    left: rem(-20px);
+  }
+  &_right {
+    transform: translate(0, -50%) rotate(-90deg);
+    right: rem(-20px);
+  }
+}
+
+.slider__composititon {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &:hover {
+    .slider__composition-dropdown {
+      top: 0;
+      opacity: 1;
+  }
+
+  .slider__composition-btn {
+    background-color: rgba($orange, 1);
+  }
+  }
+}
+
+.slider__composition-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: rem(5px);
+  background-color: rgba($orange, 0.4);
+  width: rem(90px);
+  height: rem(90px);
+  color: #fff;
+  font-size: rem(14px);
+  @include gagalin;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slider__composition-icon {
+  width: rem(45px);
+  height: rem(45px);
+  fill: #fff;
+}
+
+.slider__composition-dropdown {
+  position: absolute;
+  left: rem(90px);
+  top: rem(-1000px);
+  border-radius: rem(5px);
+  background-color: rgba(255, 255, 255, 0.9);
+  width: rem(270px);
+  padding: rem(15px);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.dropdown__table {
+  width: 100%;
+}
+
+.dropdown__icon {
+  width: rem(60px);
+  height: rem(60px);
+}
+
+// .dropdown__col_icon {
+//   width: rem(45px);
+//   height: rem(45px);
+// }
+.dropdown__col_text {
+  padding: 0 rem(30px);
+  @include ubuntu($style: medium);
+}
+
+.dropdown__col_weight {
+  text-align: right;
+  @include ubuntu($style: light);
+}
+
+.slider__composition-energy {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: rem(75px);
+  height: rem(75px);
+  fill: #fff;
+}
