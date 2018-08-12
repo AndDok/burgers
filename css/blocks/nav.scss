@@ -6,7 +6,7 @@
 
 .nav__item {
 	white-space: nowrap;
-
+	
 	&:last-child {
 		margin-right: 0;
 		&:after {
@@ -36,3 +36,69 @@
 		text-decoration: underline;
 	}
 }
+
+.nav__mobile {
+	position: fixed;
+	background-color: #2f3234;
+	top: rem(-1000px);
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1000;
+	opacity: 0;
+	
+
+	&_active {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+.nav__mobile-close {
+	position: absolute;
+	top: rem(32px);
+	right: rem(20px);
+	width: rem(18px);
+	height: rem(18px);
+	fill: #c1c2c2;
+}
+
+.nav__mobile-logo {
+	margin-top: rem(12px);
+	margin-left: rem(22px);
+}
+
+
+.mobile__menu-list {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+.mobile__menu-item {
+	margin-top: rem(60px);
+	&:after {
+		content: '';
+		color: #fff;
+		width: rem(10px);
+		height: rem(10px);
+		position: absolute;
+		top: 50%;
+		left: 15px;
+		transform: translate(0, -50%);
+	}
+	&:nth-child(1)
+		&:before {
+		content: '';
+	}
+}
+
+.mobile__menu-link {
+	@include ubuntu($style: light);
+	font-size: rem(24px);
+	color: #fff;
+	text-decoration: none;
+		
+}
+
+

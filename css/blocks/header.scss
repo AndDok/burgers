@@ -29,3 +29,14 @@
   }
 }
 
+.mobile__menu-btn {
+  width: rem(25px);
+  height: rem(25px);
+  margin-left: rem(30px);
+  display: none;
+
+  @include tablets() {
+    display: block;
+  }
+}
+
