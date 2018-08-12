@@ -14,6 +14,18 @@
   
 }
 
+.slider__icon {
+  height: rem(17px);
+  width: rem(17px);
+}
+
+.slider__composition-energy-icon {
+
+  height: rem(75px);
+  width: rem(60px);
+
+}
+
 .slider__elem {
   display: flex;
   height: 100%;
@@ -90,8 +102,8 @@
 .slider__arrow {
   position: absolute;
   top: 50%;
-  height: rem(15px);
-  width: rem(27px);
+  height: rem(17px);
+  width: rem(17px);
   fill: #fff;
   &_left {
     transform: translate(0, -50%) rotate(90deg);
