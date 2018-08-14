@@ -27,7 +27,7 @@
 }
 
 .slider__elem {
-  display: flex;
+  display: flex !important;
   height: 100%;
   position: relative;
   @include tablets {

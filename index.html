@@ -8,7 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="./css/main.css">
-  
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+  </script>
+
   <title>Burgers</title>
 </head>
 
@@ -218,21 +220,105 @@
                       </tr>
                     </table>
                   </div>
-                  
+
                 </div>
                 <div class="slider__composition-energy">
-                    <svg class="slider__composition-energy-icon">
-                      <use xlink:href="./img/sprite/sprite.svg#kkal"></use>
-                    </svg>
+                  <svg class="slider__composition-energy-icon">
+                    <use xlink:href="./img/sprite/sprite.svg#kkal"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="slider__elem">
+                <div class="slider__col">
+                  <img src="./img/burger_slider/blck_burger.png" alt="burger" class="slider__img">
+                </div>
+                <div class="slider__col">
+                  <div class="section__title section__title_white">Dark BEEF Burger</div>
+                  <div class="slider__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь,
+                    двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
+                  <div class="slider__order">
+                    <div class="slider__price">
+                      <span>500</span> рублей</div>
+                    <a href="#" class="btn">Заказать</a>
                   </div>
+                </div>
+                <div class="slider__composititon">
+                  <div class="slider__composition-btn">
+                    <svg class="slider__composition-icon">
+                      <use xlink:href="./img/sprite/sprite.svg#burger"></use>
+                    </svg>
+                    состав
+                  </div>
+                  <div class="slider__composition-dropdown">
+                    <table class="dropdown__table">
+                      <tr class="dropdown__row">
+                        <td class="dropdown__col dropdown__col_icon">
+                          <svg class="dropdown__icon">
+                            <use xlink:href="./img/sprite/sprite.svg#beef"></use>
+                          </svg>
+                        </td>
+                        <td class="dropdown__col dropdown__col_text">Мясо</td>
+                        <td class="dropdown__col dropdown__col_weight">300г</td>
+                      </tr>
+                      <tr class="dropdown__row">
+                        <td class="dropdown__col dropdown__col_icon">
+                          <svg class="dropdown__icon">
+                            <use xlink:href="./img/sprite/sprite.svg#buns"></use>
+                          </svg>
+                        </td>
+                        <td class="dropdown__col dropdown__col_text">Булочки</td>
+                        <td class="dropdown__col dropdown__col_weight">100г</td>
+                      </tr>
+                      <tr class="dropdown__row">
+                        <td class="dropdown__col dropdown__col_icon">
+                          <svg class="dropdown__icon">
+                            <use xlink:href="./img/sprite/sprite.svg#salad"></use>
+                          </svg>
+                        </td>
+                        <td class="dropdown__col dropdown__col_text">Зелень</td>
+                        <td class="dropdown__col dropdown__col_weight">70г</td>
+                      </tr>
+                      <tr class="dropdown__row">
+                        <td class="dropdown__col dropdown__col_icon">
+                          <svg class="dropdown__icon">
+                            <use xlink:href="./img/sprite/sprite.svg#sauce"></use>
+                          </svg>
+                        </td>
+                        <td class="dropdown__col dropdown__col_text">Соус</td>
+                        <td class="dropdown__col dropdown__col_weight">150г</td>
+                      </tr>
+                      <tr class="dropdown__row">
+                        <td class="dropdown__col dropdown__col_icon">
+                          <svg class="dropdown__icon">
+                            <use xlink:href="./img/sprite/sprite.svg#cucumber"></use>
+                          </svg>
+                        </td>
+                        <td class="dropdown__col dropdown__col_text">Овощи</td>
+                        <td class="dropdown__col dropdown__col_weight">200г</td>
+                      </tr>
+                      <tr class="dropdown__row">
+                        <td class="dropdown__col dropdown__col_icon">
+                          <svg class="dropdown__icon">
+                            <use xlink:href="./img/sprite/sprite.svg#cheese"></use>
+                          </svg>
+                        </td>
+                        <td class="dropdown__col dropdown__col_text">Сыр</td>
+                        <td class="dropdown__col dropdown__col_weight">80г</td>
+                      </tr>
+                    </table>
+                  </div>
+
+                </div>
+                <div class="slider__composition-energy">
+                  <svg class="slider__composition-energy-icon">
+                    <use xlink:href="./img/sprite/sprite.svg#kkal"></use>
+                  </svg>
+                </div>
               </li>
             </ul>
           </div>
         </div>
       </section>
-
-      
-
       <section class="section team">
         <div class="team__section">
           <div class="team__content">
@@ -290,7 +376,6 @@
           </div>
         </div>
       </section>
-
       <section class="section menu">
         <div class="section__title section__title_white menu__title">Меню</div>
         <ul class="menu-acco">
@@ -341,7 +426,6 @@
           </li>
         </ul>
       </section>
-
       <section class="section reviews">
         <ul class="reviews__list">
           <li class="reviews__item">
@@ -522,18 +606,11 @@
                   </div>
                   <div class="order__form-row">
 
-                      <label class="checkbox__label">
-                          <input type="checkbox" name="checkbox" class="checkbox" value="">
-                          <span class="checkbox-custom"></span>
-                          <span class="order__radio-title">Не перезванивать</span>
-                      </label>
-    
-
-                    <!-- <label class="order__radio order__radio_checkbox">
-                      <input class="order__radio-elem" name="callback" type="checkbox">
-                      <div class="order__radio-fake"></div>
-                      <div class="order__radio-title">Не перезванивать</div>
-                    </label> -->
+                    <label class="checkbox__label">
+                      <input type="checkbox" name="checkbox" class="checkbox" value="">
+                      <span class="checkbox-custom"></span>
+                      <span class="order__radio-title">Не перезванивать</span>
+                    </label>
                   </div>
                   <div class="order__form-row">
                     <input class="order__form-button" name="" type="submit" value="Заказать">
@@ -545,12 +622,12 @@
           </form>
         </div>
       </section>
-      
 
-      <section class="section map">
-        <div class="container">
 
-        </div>
+      <section class="section footer_map">
+        
+          <div id="map" class="map"></div>
+        
 
         <footer class="footer">
           <div class="container footer__container">
@@ -630,16 +707,16 @@
     </li>
   </ul>
 
-<div class="nav__mobile">
-  <div class="nav__mobile-logo">
-    <a href="#" class="logo">
-      <img src="./img/icons/logo.svg" alt="logo" class="logo__icon">
+  <div class="nav__mobile">
+    <div class="nav__mobile-logo">
+      <a href="#" class="logo">
+        <img src="./img/icons/logo.svg" alt="logo" class="logo__icon">
+      </a>
+    </div>
+    <a href="#" class="nav__mobile-close">
+      <img src="./img/icons/close.svg" alt="close" class="nav__mobile-close-pic">
     </a>
-  </div>
-  <a href="#" class="nav__mobile-close">
-    <img src="./img/icons/close.svg" alt="close" class="nav__mobile-close-pic">
-  </a>
-  <div class="mobile__menu-wrap">
+    <div class="mobile__menu-wrap">
       <nav class="mobile__menu">
         <ul class="mobile__menu-list">
           <li class="mobile__menu-item">
@@ -663,9 +740,10 @@
         </ul>
       </nav>
     </div>
-</div>
+  </div>
 
   <script src="./js/jquery.js"></script>
+  <script src="/js/slick.js"></script>
   <script src="./js/scripts.js"></script>
 
 </body>
