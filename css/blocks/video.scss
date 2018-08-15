@@ -1,0 +1,13 @@
+.video {
+  background: url("../../img/bg/work-bg.png") no-repeat;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-position: center center;
+  width: 100vw;
+  height: 100vh;
+  .section__title {
+    margin-bottom: rem(80px);
+  }
+}
