@@ -1,41 +1,48 @@
-.nav__list {
-	width: 100%;
-  display: flex;
-  align-items: center;
+.nav {
+	margin-left: auto;
+	display: flex;
+	align-items: stretch;
+	margin-right: 16px;
 }
 
-.nav__item {
-	white-space: nowrap;
-	
-	&:last-child {
-		margin-right: 0;
-		&:after {
-			display: none;
-		}
-	}
+.nav__list {
+	display: flex;
+	justify-content: flex-end;
+	align-items: stretch;
+}
 
-	&:after {
-		content: "";
-		width: 4px;
-		height: 4px;
-		border-radius: 50%;
-		background: white;
-		margin: 0 12px;
-	}
+.nav__elem {
+	display: flex;
+	position: relative;
+	align-items: stretch;
 }
 
 .nav__link {
-	font-size: rem(13px);
-	text-transform: uppercase;
-	color: white;
-  text-decoration: none;
-  
+	display: flex;
+	position: relative;
+	align-items: center;
 	@include ubuntu(medium);
-
-	&:hover {
-		text-decoration: underline;
-	}
+	text-transform: uppercase;
+	color: #fff;
+	margin-left: 35px;
+	font-size: rem(13px);
+	text-decoration: none;
 }
+
+.nav__elem:first-child:after {
+	content: '';
+}
+
+.nav__elem:after {
+	content: '\2022';
+	color: #fff;
+	font-size: rem(12px);
+	position: absolute;
+	top: 50%;
+	left: 15px;
+	transform: translate(0, -50%);
+}
+
 
 .nav__mobile {
 	position: fixed;
@@ -77,20 +84,21 @@
 
 .mobile__menu-item {
 	margin-top: rem(60px);
-	&:after {
-		content: '';
-		color: #fff;
-		width: rem(10px);
-		height: rem(10px);
-		position: absolute;
-		top: 50%;
-		left: 15px;
-		transform: translate(0, -50%);
-	}
-	&:nth-child(1)
-		&:before {
-		content: '';
-	}
+	position: relative;	
+	
+}
+
+.mobile__menu-item:after {
+	content: '';
+	display: inline-block;
+	background-color: #fff;
+	width: rem(10px);
+	height: rem(10px);
+	position: absolute;
+	bottom: rem(-34px);
+	left: 50%;
+	transform: translate(-50%,0);
+	border-radius: 50%
 }
 
 .mobile__menu-link {
@@ -98,7 +106,7 @@
 	font-size: rem(24px);
 	color: #fff;
 	text-decoration: none;
-		
+			
 }
 
 

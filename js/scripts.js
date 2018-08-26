@@ -1,9 +1,14 @@
 $(document).ready(function () {
 
+  //page scroll
+  $('#fullpage').fullpage({
+    menu: '#menu',
+  });
+
   //slider
   $('.slider__list').slick();
 
-  // mobile menu
+  //mobile menu
   $('.mobile__menu-btn').on('click', function (e) {
     e.preventDefault();
     $('.nav__mobile').addClass('nav__mobile_active');
@@ -15,13 +20,21 @@ $(document).ready(function () {
   });
 
   //team accordion
-  
-  $('.team-acco__item').on('click', function (e) {
+    $('.team__elem').on('click', function(e) {
     e.preventDefault();
-    $(this).addClass('team-acco__trigger');
-  });
+    $('.team__elem').removeClass('team__elem_active');
+    $(this).addClass('team__elem_active');
+});
+  // $('.team-acco__item').on('click', function (e) {
+  //   e.preventDefault();
+  //   $('.team-acco__content').removeClass('team-acco__content_active');
+  //   $('.team-acco__content').addClass('team-acco__content_active');
+  // });
 
-  // yandex map
+  //Player
+  
+
+  //yandex map
   ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
         center: [59.939095, 30.315868],

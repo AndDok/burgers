@@ -8,8 +8,9 @@
 	}
 }
 
+
 .team__content {
-  text-align: center;
+  text-align: left;
 }
 
 .team__section {
@@ -31,3 +32,138 @@
   }
 }
 
+//////////////////
+
+
+@media screen and (max-width: 768px) {
+  .team {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    flex-direction: column;
+  }
+}
+
+.team__elem {
+  margin-bottom: 20px;
+}
+
+.team__elem_active .team__drop {
+  max-height: 300px;
+}
+
+.team__elem_active .team__name {
+  color: #f9b43b;
+}
+
+.team__elem_active .team__triangle {
+  
+  transform: rotate(-180deg);
+}
+
+.team__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .team__btn {
+    
+    justify-content: center;
+  }
+}
+
+.team__triangle {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid #f9b43b;
+  box-sizing: content-box;
+  margin-right: 10px;
+}
+
+.team__name {
+  font-family: 'Gagalin-Regular';
+  font-size: 0.875rem;
+  color: #fff;
+}
+
+.team__drop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+  .team__drop {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.team__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  margin-right: 20px;
+  margin-top: 3px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .team__img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.team__info {
+  width: calc(100% - 120px);
+}
+
+@media screen and (max-width: 768px) {
+  .team__info {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.team__position {
+  color: #fff;
+  font-family: 'Ubuntu-Bold';
+  margin-bottom: 10px;
+}
+
+.team__text {
+  color: #fff;
+  font-family: 'Ubuntu-Light';
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+  .team {
+    width: 100%;
+  }
+  .team .title {
+    text-align: center;
+  }
+}

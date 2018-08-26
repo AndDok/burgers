@@ -15,9 +15,11 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <div class="maincontent">
-      <section class="section hero">
+
+  <div class="wrapper" >
+    <div class="maincontent" id="fullpage">
+      <section class="section hero" data-anchor="hero">
+
         <div class="container">
           <header class="header">
             <div class="header__logo">
@@ -26,31 +28,45 @@
             </div>
             <div class="header__btns">
               <div class="header__menu">
+
                 <nav class="nav">
                   <ul class="nav__list">
-                    <li class="nav__item">
-                      <a href="#" class="nav__link">О нас</a>
+                    <li class="nav__elem">
+                      <a href="#best" class="nav__link">
+                        О нас
+                      </a>
                     </li>
-                    <li class="nav__item">
-                      <a href="#" class="nav__link">Бургеры</a>
+                    <li class="nav__elem">
+                      <a href="#slider" class="nav__link">
+                        Бургеры
+                      </a>
                     </li>
-                    <li class="nav__item">
-                      <a href="#" class="nav__link">Команда</a>
+                    <li class="nav__elem">
+                      <a href="#team" class="nav__link">
+                        Команда
+                      </a>
                     </li>
-                    <li class="nav__item">
-                      <a href="#" class="nav__link">Меню</a>
+                    <li class="nav__elem">
+                      <a href="#menu" class="nav__link">
+                        Меню
+                      </a>
                     </li>
-                    <li class="nav__item">
-                      <a href="#" class="nav__link">Отзывы</a>
+                    <li class="nav__elem">
+                      <a href="#reviews" class="nav__link">
+                        Отзывы
+                      </a>
                     </li>
-                    <li class="nav__item">
-                      <a href="#" class="nav__link">Контакты</a>
+                    <li class="nav__elem">
+                      <a href="#footer_map" class="nav__link">
+                        Контакты
+                      </a>
                     </li>
                   </ul>
                 </nav>
+
               </div>
               <div class="header__links">
-                <a href="#" class="order-link btn">Заказать</a>
+                <a href="#order" class="order-link btn">Заказать</a>
               </div>
               <div class="mobile__menu-btn" id="mobile__menu-btn">
                 <a href="#" class="mobile__menu-link">
@@ -72,14 +88,16 @@
             </div>
           </div>
         </div>
-        <a class="down-arrow" href="#">
+        <a class="down-arrow" href="#best">
           <svg class="down-arrow__icon">
             <use xlink:href="./img/sprite/sprite.svg#arrow-scroll"></use>
           </svg>
         </a>
+
       </section>
 
-      <section class="section best">
+      <section class="section best" data-anchor="best">
+
         <div class="container">
           <div class="section__title section__title_black">Мы лучшие</div>
           <ul class="best__list">
@@ -125,9 +143,11 @@
             </li>
           </ul>
         </div>
+
       </section>
 
-      <section class="section slider">
+      <section class="section slider" data-anchor="slider">
+
         <div class="container">
           <div class="slider">
             <a href="#" class="slider__arrow slider__arrow_left">
@@ -152,7 +172,7 @@
                   <div class="slider__order">
                     <div class="slider__price">
                       <span>500</span> рублей</div>
-                    <a href="#" class="btn">Заказать</a>
+                    <a href="#order" class="btn">Заказать</a>
                   </div>
                 </div>
                 <div class="slider__composititon">
@@ -242,7 +262,7 @@
                   <div class="slider__order">
                     <div class="slider__price">
                       <span>500</span> рублей</div>
-                    <a href="#" class="btn">Заказать</a>
+                    <a href="#order" class="btn">Заказать</a>
                   </div>
                 </div>
                 <div class="slider__composititon">
@@ -324,12 +344,69 @@
             </ul>
           </div>
         </div>
+
       </section>
-      <section class="section team">
+      <section class="section team" data-anchor="team">
+
         <div class="team__section">
           <div class="team__content">
             <div class="section__title">Команда</div>
-            <ul class="team-acco">
+            <ul class="team__list">
+              <li class="team__elem">
+                <a href="#" class="team__btn">
+                  <span class="team__triangle"></span>
+                  <span class="team__name">Радригес</span>
+                </a>
+                <div class="team__drop">
+                  <div class="team__img" style="background-image: url(../../img/team/team_1.png);"></div>
+                  <div class="team__info">
+                    <div class="team__position">Уборщик</div>
+                    <div class="team__text">С радостью поможет подобрать идеальный бургер и оформить заказ. С радостью поможет подобрать идеальный
+                      бургер и оформить заказ. </div>
+                  </div>
+                </div>
+              </li>
+              <li class="team__elem">
+                <a href="#" class="team__btn">
+                  <span class="team__triangle"></span>
+                  <span class="team__name">Радригес</span>
+                </a>
+                <div class="team__drop">
+                  <div class="team__img" style="background-image: url(../../img/team/team_1.png);"></div>
+                  <div class="team__info">
+                    <div class="team__position">Уборщик</div>
+                    <div class="team__text">С радостью поможет подобрать идеальный бургер и оформить заказ. </div>
+                  </div>
+                </div>
+              </li>
+              <li class="team__elem">
+                <a href="#" class="team__btn">
+                  <span class="team__triangle"></span>
+                  <span class="team__name">Радригес</span>
+                </a>
+                <div class="team__drop">
+                  <div class="team__img" style="background-image: url(../../img/team/team_1.png);"></div>
+                  <div class="team__info">
+                    <div class="team__position">Уборщик</div>
+                    <div class="team__text">С радостью поможет подобрать идеальный бургер и оформить заказ. </div>
+                  </div>
+                </div>
+              </li>
+              <li class="team__elem">
+                <a href="#" class="team__btn">
+                  <span class="team__triangle"></span>
+                  <span class="team__name">Радригес</span>
+                </a>
+                <div class="team__drop">
+                  <div class="team__img" style="background-image: url(../../img/team/team_1.png);"></div>
+                  <div class="team__info">
+                    <div class="team__position">Уборщик</div>
+                    <div class="team__text">С радостью поможет подобрать идеальный бургер и оформить заказ. </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- <ul class="team-acco">
               <li class="team-acco__item">
                 <a href="#" class="team-acco__trigger">Дэниэл Редклифф</a>
                 <div class="team-acco__content">
@@ -378,11 +455,13 @@
                   </div>
                 </div>
               </li>
-            </ul>
+            </ul> -->
           </div>
         </div>
+
       </section>
-      <section class="section menu">
+      <section class="section menu" data-anchor="menu">
+
         <div class="section__title section__title_white menu__title">Меню</div>
         <ul class="menu-acco">
           <li class="menu-acco__item">
@@ -431,8 +510,10 @@
             </div>
           </li>
         </ul>
+
       </section>
-      <section class="section reviews">
+      <section class="section reviews" data-anchor="reviews">
+
         <ul class="reviews__list">
           <li class="reviews__item">
             <div class="review">
@@ -547,16 +628,23 @@
             </div>
           </li>
         </ul>
+
       </section>
 
-      <section class="section video">
+      <section class="section video" data-anchor="video">
+
         <div class="container">
-            <div class="section__title section__title_black">Как мы работаем</div>
+          <div class="section__title section__title_black">Как мы работаем</div>
+          <div id="player">
+            <div id="ytplayer"></div>
+          </div>
         </div>
+
       </section>
 
 
-      <section class="section order">
+      <section class="section order" data-anchor="order">
+
         <div class="container">
           <div class="section__title">Закажите доставку</div>
           <form class="order__form-tag" id="order-form">
@@ -634,10 +722,11 @@
             </div>
           </form>
         </div>
+
       </section>
 
 
-      <section class="section footer_map">
+      <section class="section footer_map" data-anchor="footer_map">
 
         <div id="map" class="map"></div>
 
@@ -693,30 +782,30 @@
 
   </div>
 
-  <ul class="fixed-menu">
-    <li class="fixed-menu__item">
-      <a class="fixed-menu__link" href="#"></a>
+  <ul class="fixed-menu" id="menu">
+    <li class="fixed-menu__item" data-menuanchor="hero">
+      <a class="fixed-menu__link" href="#hero"></a>
     </li>
-    <li class="fixed-menu__item">
-      <a class="fixed-menu__link" href="#"></a>
+    <li class="fixed-menu__item" data-menuanchor="best">
+      <a class="fixed-menu__link" href="#best"></a>
     </li>
-    <li class="fixed-menu__item">
-      <a class="fixed-menu__link" href="#"></a>
+    <li class="fixed-menu__item" data-menuanchor="slider">
+      <a class="fixed-menu__link" href="#slider"></a>
     </li>
-    <li class="fixed-menu__item">
-      <a class="fixed-menu__link" href="#"></a>
+    <li class="fixed-menu__item" data-menuanchor="team">
+      <a class="fixed-menu__link" href="#team"></a>
     </li>
-    <li class="fixed-menu__item">
-      <a class="fixed-menu__link" href="#"></a>
+    <li class="fixed-menu__item" data-menuanchor="menu">
+      <a class="fixed-menu__link" href="#menu"></a>
     </li>
-    <li class="fixed-menu__item">
-      <a class="fixed-menu__link" href="#"></a>
+    <li class="fixed-menu__item" data-menuanchor="reviews">
+      <a class="fixed-menu__link" href="#reviews"></a>
     </li>
-    <li class="fixed-menu__item">
-      <a class="fixed-menu__link" href="#"></a>
+    <li class="fixed-menu__item" data-menuanchor="order">
+      <a class="fixed-menu__link" href="#order"></a>
     </li>
-    <li class="fixed-menu__item">
-      <a class="fixed-menu__link" href="#"></a>
+    <li class="fixed-menu__item" data-menuanchor="footer_map">
+      <a class="fixed-menu__link" href="#footer_map"></a>
     </li>
   </ul>
 
@@ -733,22 +822,22 @@
       <nav class="mobile__menu">
         <ul class="mobile__menu-list">
           <li class="mobile__menu-item">
-            <a href="#" class="mobile__menu-link">О нас</a>
+            <a href="#best" class="mobile__menu-link">О нас</a>
           </li>
           <li class="mobile__menu-item">
-            <a href="#" class="mobile__menu-link">Бургеры</a>
+            <a href="#slider" class="mobile__menu-link">Бургеры</a>
           </li>
           <li class="mobile__menu-item">
-            <a href="#" class="mobile__menu-link">Команда</a>
+            <a href="#team" class="mobile__menu-link">Команда</a>
           </li>
           <li class="mobile__menu-item">
-            <a href="#" class="mobile__menu-link">Меню</a>
+            <a href="#menu" class="mobile__menu-link">Меню</a>
           </li>
           <li class="mobile__menu-item">
-            <a href="#" class="mobile__menu-link">Отзывы</a>
+            <a href="#reviews" class="mobile__menu-link">Отзывы</a>
           </li>
           <li class="mobile__menu-item">
-            <a href="#" class="mobile__menu-link">Контакты</a>
+            <a href="#footer_map" class="mobile__menu-link">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -757,7 +846,10 @@
 
   <script src="./js/jquery.js"></script>
   <script src="/js/slick.js"></script>
+  <script src="/js/fullpage.js"></script>
   <script src="./js/scripts.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="./js/player.js"></script>
 
 </body>
 

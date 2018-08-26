@@ -63,8 +63,11 @@
 
 .team-acco__content {
 	padding-top: rem(14px);
-  display: none;
-}
+	display: none;
+	& .team-acco__content_active {
+		display: flex;
+	}
+	}
 
 .team-acco__pic {
 	text-align: center;
@@ -80,10 +83,13 @@
 
 .team-acco__text {
 	width: 70%;
+  text-align: left;
+  display: flex;
+  flex-flow: column;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
-.team-acco__pic, .team-acco__text {
-}
 
 .team-acco__title {
 	@include ubuntu(bold);
