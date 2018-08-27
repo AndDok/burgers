@@ -20,19 +20,69 @@ $(document).ready(function () {
   });
 
   //team accordion
-    $('.team__elem').on('click', function(e) {
-    e.preventDefault();
-    $('.team__elem').removeClass('team__elem_active');
-    $(this).addClass('team__elem_active');
-});
-  // $('.team-acco__item').on('click', function (e) {
-  //   e.preventDefault();
-  //   $('.team-acco__content').removeClass('team-acco__content_active');
-  //   $('.team-acco__content').addClass('team-acco__content_active');
-  // });
+  var teamName = document.querySelectorAll(".team__btn");
+  var teamItem = document.querySelectorAll(".team__elem");
+  for (let i = 0; i < teamName.length; i++) {
+      teamName[i].addEventListener("click", function(e) {
 
-  //Player
-  
+          e.preventDefault();
+
+          for (let j = 0; j < teamItem.length; j++) {
+              if (j !== i) {
+                  teamItem[j].classList.remove("team__elem_active");
+              };
+          };
+
+          this.closest('.team__elem').classList.toggle("team__elem_active");
+      });
+  }; 
+   
+// menu accordion
+var accordionLink = document.querySelectorAll(".accordion-menu__link");
+var accordionElem = document.querySelectorAll(".accordion-menu__elem");
+var accordionList = document.querySelector(".accordion-menu__list");
+var accordionListClose = document.querySelectorAll(".accordion-menu__drop-close");
+
+
+for (let i = 0; i < accordionLink.length; i++) {
+    accordionLink[i].addEventListener("click", function(e) {
+
+        e.preventDefault();
+
+        for (let j = 0; j < accordionElem.length; j++) {
+            if (j !== i) {
+                accordionElem[j].classList.remove("accordion-menu__elem_active");
+
+            };
+        };
+
+        this.closest('.accordion-menu__elem').classList.toggle("accordion-menu__elem_active");
+        this.closest('.accordion-menu__list').classList.toggle("accordion-menu__list_active");
+    });
+}; 
+
+for (let i = 0; i < accordionListClose.length; i++) {
+    accordionListClose[i].addEventListener("click", function(e) {
+        e.preventDefault();
+
+        for (let j = 0; j < accordionElem.length; j++) {
+            accordionElem[j].classList.remove("accordion-menu__elem_active");
+        };
+        
+        this.closest('.accordion-menu__list').classList.remove("accordion-menu__list_active");
+    });
+};
+
+//popup
+$('.review__button-wrap').on('click', function (e) {
+  e.preventDefault();
+  $('.popup').addClass('popup_active');
+});
+
+$('.popup-close').on('click', function (e) {
+  e.preventDefault();
+  $('.popup').removeClass('popup_active');
+});
 
   //yandex map
   ymaps.ready(function () {

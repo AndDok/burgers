@@ -3,12 +3,11 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
-  display: flex;
+	display: flex;
 }
 
 .menu-acco__item {
 	height: 100%;
-
 	&.active {
 		.menu-acco__trigger-text {
 			color: $yellow;
@@ -23,7 +22,7 @@
 	float: left;
 	@include cover;
 	text-decoration: none;
-  position: relative;
+	position: relative;
 }
 
 .menu-acco__trigger-text {
@@ -32,12 +31,12 @@
 	@include gagalin;
 	text-align: center;
 	white-space: nowrap;
-  position: absolute;
-  transform: rotate(-90deg) translateY(-50%);
-  transform-origin: 0 0;
-  left: 50%;
-  top: 100%;
-  margin-top: rem(-20px);
+	position: absolute;
+	transform: rotate(-90deg) translateY(-50%);
+	transform-origin: 0 0;
+	left: 50%;
+	top: 100%;
+	margin-top: rem(-20px);
 }
 
 .menu-acco__content {
@@ -54,6 +53,128 @@
 	color: #fff;
 	padding: rem(60px) rem(30px);
 	width: 100%;
-  line-height: 1.8;
-  display: none;
+	line-height: 1.8;
+	display: none;
+}
+
+///////@at-root
+.accordion-menu {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+	.accordion-menu {
+		width: 100%;
+	}
+}
+
+.accordion-menu__list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	position: relative;
+	height: 100%;
+}
+
+@media screen and (max-width: 480px) {
+	.accordion-menu__list_active .accordion-menu__elem {
+		width: 0px;
+	}
+}
+
+.accordion-menu__list_active .accordion-menu__elem_active {
+	width: 100vw;
+}
+
+.accordion-menu__elem {
+	position: relative;
+	width: auto;
+	max-width: rem(80px);
+	height: 100%;
+	transition: 0.3s;
+}
+
+.accordion-menu__elem_active {
+	max-width: 3000px;
+	
+}
+
+.accordion-menu__link {
+	position: relative;
+	display: inline-block;
+	width: rem(80px);
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	float: left;
+	background-color: rgba(47, 50, 52, 0.629);
+}
+
+.accordion-menu__link_active {
+	background-color: rgba(47, 50, 52, 0.629);
+	color: $yellow;
+}
+
+.accordion-menu__link-text {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	color: #fff;
+	font-family: 'Gagalin-Regular';
+	font-size: 2.5rem;
+	white-space: nowrap;
+	transform: rotate(-90deg) translateY(-50%);
+	transform-origin: 0 0;
+	margin-top: -30px;
+	
+}
+
+.accordion-menu__drop {
+	position: relative;
+	background-color: rgba(47, 50, 52, 0.929);
+	width: calc(100% - 80px);
+	height: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+.accordion-menu__text {
+	padding: 60px 35px;
+	text-align: left;
+	color: #fff;
+  @include ubuntu($style: light);
+  line-height: 1.5;
+  font-size: rem(14px);
+}
+
+.accordion-menu__drop-close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 20px;
+	height: 20px;
+	display: none;
+}
+
+.accordion-menu__drop-close svg {
+	width: 100%;
+	height: 100%;
+	fill: #fff;
+}
+
+@media screen and (max-width: 480px) {
+	.accordion-menu__drop-close {
+		display: block;
+	}
 }

@@ -35,12 +35,25 @@
 //////////////////
 
 
+.team {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 114px 95px;
+  width: 50%;
+  background-color: rgba(31, 33, 34, 0.93);
+  text-align: left;
+}
+
 @media screen and (max-width: 768px) {
   .team {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
@@ -58,7 +71,8 @@
 }
 
 .team__elem_active .team__triangle {
-  
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
 }
 
@@ -66,14 +80,17 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding-bottom: 10px;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
   .team__btn {
-    
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 }
@@ -149,14 +166,16 @@
 
 .team__position {
   color: #fff;
-  font-family: 'Ubuntu-Bold';
+  @include ubuntu($style: bold);
   margin-bottom: 10px;
+  font-size: rem(14px);
 }
 
 .team__text {
   color: #fff;
-  font-family: 'Ubuntu-Light';
+  @include ubuntu($style: light);
   line-height: 1.5;
+  font-size: rem(14px);
 }
 
 @media screen and (max-width: 768px) {
