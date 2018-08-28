@@ -28,4 +28,11 @@
 	&.section__title_white {
 		color: white;
 	}
+
+	@include tablets {
+    
+    text-align: center;
+    
+  }
 }
+

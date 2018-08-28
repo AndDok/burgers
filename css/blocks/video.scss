@@ -9,5 +9,24 @@
   height: 100vh;
   .section__title {
     margin-bottom: rem(80px);
+    
+  }
+  
+  
+}
+
+#ytplayer {
+  @include tablets {
+    
+    width: rem(600px);
+    height: rem(400px);
+    
+  }
+
+  @include phones {
+    
+    width: rem(350px);
+    height: rem(250px);
+    
   }
 }

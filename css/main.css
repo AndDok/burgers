@@ -738,7 +738,7 @@ footer {
 .nav__mobile {
   position: fixed;
   background-color: #2f3234;
-  top: -62.5rem;
+  top: -625rem;
   left: 0;
   width: 100vw;
   height: 100vh;
@@ -819,6 +819,9 @@ footer {
     color: #2f3234; }
   .section__title.section__title_white {
     color: white; }
+  @media screen and (max-width: 768px) {
+    .section__title {
+      text-align: center; } }
 
 .best {
   background: url("../../img/bg/best-bg.png") no-repeat;
@@ -1275,11 +1278,23 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   float: left;
-  background-color: rgba(47, 50, 52, 0.629); }
-
-.accordion-menu__link_active {
-  background-color: rgba(47, 50, 52, 0.629);
-  color: #f9b43b; }
+  background-color: rgba(47, 50, 52, 0.429); }
+  .accordion-menu__link:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(47, 50, 52, 0.429); }
+  .accordion-menu__link:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(47, 50, 52, 0.429); }
 
 .accordion-menu__link-text {
   position: absolute;
@@ -1297,6 +1312,9 @@ footer {
   transform-origin: 0 0;
   margin-top: -30px; }
 
+.accordion-menu__elem_active .accordion-menu__link-text {
+  color: #f9b43b; }
+
 .accordion-menu__drop {
   position: relative;
   background-color: rgba(47, 50, 52, 0.929);
@@ -1304,6 +1322,9 @@ footer {
   height: 100%;
   float: left;
   overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .accordion-menu__drop {
+      width: calc(100% - 75px); } }
 
 .accordion-menu__text {
   padding: 60px 35px;
@@ -1412,7 +1433,8 @@ footer {
   margin-bottom: 1.5625rem; }
   @media screen and (max-width: 768px) {
     .review__title {
-      margin-bottom: 0.875rem; } }
+      margin-bottom: 0.875rem;
+      padding-top: 55px; } }
 
 .review__shorttext {
   color: #ffffff;
@@ -2017,6 +2039,10 @@ footer {
   color: rgba(255, 255, 255, 0.502);
   line-height: 1.2;
   font-size: 20px; }
+  @media screen and (max-width: 768px) {
+    .slider__composition-btn-energy {
+      top: 88%;
+      left: 0%; } }
 
 .slider__composition-btn-energy-text {
   position: absolute;
@@ -2121,6 +2147,16 @@ footer {
   height: 100vh; }
   .video .section__title {
     margin-bottom: 5rem; }
+
+@media screen and (max-width: 768px) {
+  #ytplayer {
+    width: 37.5rem;
+    height: 25rem; } }
+
+@media screen and (max-width: 480px) {
+  #ytplayer {
+    width: 21.875rem;
+    height: 15.625rem; } }
 
 /*!
  * fullPage 3.0.2
@@ -2364,7 +2400,7 @@ html.fp-enabled,
   -ms-flex-align: center;
   align-items: center;
   background-color: rgba(47, 50, 52, 0.929);
-  top: -62.5rem;
+  top: -625rem;
   left: 0;
   width: 100vw;
   height: 100vh;

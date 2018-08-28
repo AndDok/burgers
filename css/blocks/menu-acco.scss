@@ -118,13 +118,30 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	float: left;
-	background-color: rgba(47, 50, 52, 0.629);
+	background-color: rgba(47, 50, 52, 0.429);
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(47, 50, 52, 0.429);
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(47, 50, 52, 0.429);
+	}
 }
 
-.accordion-menu__link_active {
-	background-color: rgba(47, 50, 52, 0.629);
-	color: $yellow;
-}
+
 
 .accordion-menu__link-text {
 	position: absolute;
@@ -139,6 +156,9 @@
 	margin-top: -30px;
 	
 }
+.accordion-menu__elem_active .accordion-menu__link-text {
+	color: $yellow;
+}
 
 .accordion-menu__drop {
 	position: relative;
@@ -147,6 +167,13 @@
 	height: 100%;
 	float: left;
 	overflow: hidden;
+	@include tablets {
+    
+    width: calc(100% - 75px);
+    
+  }
+	
+
 }
 
 .accordion-menu__text {
@@ -178,3 +205,5 @@
 		display: block;
 	}
 }
+
+
