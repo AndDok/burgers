@@ -1325,6 +1325,9 @@ footer {
   @media screen and (max-width: 768px) {
     .accordion-menu__drop {
       width: calc(100% - 75px); } }
+  @media screen and (max-width: 480px) {
+    .accordion-menu__drop {
+      width: calc(100% - 65px); } }
 
 .accordion-menu__text {
   padding: 60px 35px;
@@ -1909,6 +1912,9 @@ footer {
   @media screen and (max-width: 768px) {
     .slider__price {
       margin-bottom: 1.875rem; } }
+  @media screen and (max-width: 480px) {
+    .slider__price {
+      margin-top: 1.875rem; } }
 
 .slider__arrow {
   position: absolute;

@@ -97,6 +97,11 @@
     
     margin-bottom: rem(30px);
   }  
+
+  @include phones {
+    
+    margin-top: rem(30px);
+  }  
 }
 
 .slider__arrow {

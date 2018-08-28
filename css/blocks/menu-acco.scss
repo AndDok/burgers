@@ -171,6 +171,11 @@
     
     width: calc(100% - 75px);
     
+	}
+	@include phones {
+    
+    width: calc(100% - 65px);
+    
   }
 	
 
